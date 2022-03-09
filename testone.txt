@@ -1,0 +1,9 @@
+jal 0x0001
+addi $t0, $0, 0xFFFF
+lui $t0, 0xFFFF
+addi $t0, $t1, 0xFFFF
+or $t2, $t1, $0
+addi $t2, $t2, 0x0002
+add $t3, $t2, $0 
+mult $t2, $t3
+mflo $t1
