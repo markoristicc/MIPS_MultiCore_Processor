@@ -2,17 +2,24 @@
 
 module regfile(input  wire         CLK,
                input  wire         RST,
-               input  wire         WE3,
+               input  wire         WEA3,
+               input  wire         WEB3,
                input  wire  [4:0]  A1, A2, A3,
-               input  wire  [31:0] WD3,
-               output wire  [31:0] RD1,RD2);
+               input  wire  [4:0]  B1, B2, B3,
+               input  wire  [31:0] WDA3,
+               input  wire  [31:0] WDB3,
+               output wire  [31:0] RDA1, RDA2,
+               output wire  [31:0] RDB1, RDB2);
 
     //31 32-bit registers in register file, $0 doesn't count
     reg [31:0] rf [31:1];
     integer i;
-    //assigns data in registers A1,A2 to output RD1, RD2
-    assign RD1 = (A1 != 0) ? rf[A1] : 32'b0;
-    assign RD2 = (A2 != 0) ? rf[A2] : 32'b0;
+    //assigns data in registers A1,A2 to output RDA1, RDA2
+    assign RDA1 = (A1 != 0) ? rf[A1] : 32'b0;
+    assign RDA2 = (A2 != 0) ? rf[A2] : 32'b0;
+    //assigns data in registers B1,B2 to output RDB1, RDB2
+    assign RDB1 = (B1 != 0) ? rf[B1] : 32'b0;
+    assign RDB2 = (B2 != 0) ? rf[B2] : 32'b0;
 
     always @(negedge CLK or posedge RST)begin
         if(RST) begin
@@ -20,7 +27,8 @@ module regfile(input  wire         CLK,
                 rf[i] = 32'b0;
             end
         end else begin
-            if(WE3) rf[A3] <= WD3;
+            if(WEA3) rf[A3] <= WDA3;
+            if(WEB3) rf[B3] <= WDB3;
         end
     end
 endmodule
