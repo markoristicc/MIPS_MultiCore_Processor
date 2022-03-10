@@ -35,5 +35,5 @@ module imem(input   [5:0]  Address,
   reg [31:0] RAM[63:0];
 
   assign ReadDataA = RAM[Address]; // word aligned
-  assign ReadDataA = RAM[Address + 1];
+  assign ReadDataB = RAM[Address + 1];
 endmodule
