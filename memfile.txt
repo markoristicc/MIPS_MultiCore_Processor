@@ -1,5 +1,0 @@
-addi t0, zero, 0x0001
-add t1, t0, zero
-beq t0, t1, 1
-addi t2, zero, 0xFFFF
-addi t1, t1, 0x0001

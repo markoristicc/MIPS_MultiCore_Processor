@@ -33,13 +33,13 @@ top.v
 mips_test.v
 34
 XDG_SESSION_TYPE=tty
-XDG_SESSION_ID=5451
+XDG_SESSION_ID=6443
 XDG_SESSION_CLASS=user
 XDG_RUNTIME_DIR=/run/user/1002
-VSCODE_IPC_HOOK_CLI=/run/user/1002/vscode-ipc-2c39a518-708b-4979-9338-353197fee6d5.sock
+VSCODE_IPC_HOOK_CLI=/run/user/1002/vscode-ipc-97dcc652-95ce-4d93-9bb9-82787736e836.sock
 VSCODE_GIT_IPC_HANDLE=/run/user/1002/vscode-git-d65ed40675.sock
-VSCODE_GIT_ASKPASS_NODE=/home/brianli/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/node
-VSCODE_GIT_ASKPASS_MAIN=/home/brianli/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_NODE=/home/brianli/.vscode-server/bin/b5205cc8eb4fbaa726835538cd82372cc0222d43/node
+VSCODE_GIT_ASKPASS_MAIN=/home/brianli/.vscode-server/bin/b5205cc8eb4fbaa726835538cd82372cc0222d43/extensions/git/dist/askpass-main.js
 VSCODE_GIT_ASKPASS_EXTRA_ARGS=
 VMR_MODE_FLAG=64
 VERDI_HOME=/tools/synopsys/verdi/Q-2020.03-SP2-7
@@ -51,37 +51,37 @@ VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH=linux64
 UNAME=/bin/uname
 TOOL_HOME=/tools/synopsys/vcs/Q-2020.03-SP2-6/linux64
-TERM_PROGRAM_VERSION=1.64.2
+TERM_PROGRAM_VERSION=1.65.0
 TERM_PROGRAM=vscode
-SSH_CONNECTION=169.231.164.34 59571 128.111.41.159 22
-SSH_CLIENT=169.231.164.34 59571 22
+SSH_CONNECTION=72.194.31.169 57191 128.111.41.159 22
+SSH_CLIENT=72.194.31.169 57191 22
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 PITON_ROOT=/home/brianli/openpiton
 OVA_UUM=0
 MOTD_SHOWN=pam
 LC_ALL=C
-GIT_ASKPASS=/home/brianli/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/extensions/git/dist/askpass.sh
+GIT_ASKPASS=/home/brianli/.vscode-server/bin/b5205cc8eb4fbaa726835538cd82372cc0222d43/extensions/git/dist/askpass.sh
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1002/bus
 COLORTERM=truecolor
 BASH_FUNC_vcs%%=() {  command vcs -full64 "$@"_}
 ARIANE_ROOT=/home/brianli/openpiton/piton/design/chip/tile/ariane
 0
 10
-1646728965 mips_test.v
-1646724723 top.v
+1647030616 mips_test.v
+1646959043 top.v
 1646724711 ALU.v
-1646724721 regfile.v
+1646955472 regfile.v
 1646724721 other.v
-1646807760 mips.v
-1646724717 mem.v
-1646805750 hazard.v
-1646811942 datapath.v
+1646958594 mips.v
+1646958965 mem.v
+1647025477 hazard.v
+1647025612 datapath.v
 1646807834 controller.v
 4
 1622777002 /tools/synopsys/vcs/Q-2020.03-SP2-6/linux64/lib/libvirsim.so
 1622776735 /tools/synopsys/vcs/Q-2020.03-SP2-6/linux64/lib/liberrorinf.so
 1622776695 /tools/synopsys/vcs/Q-2020.03-SP2-6/linux64/lib/libsnpsmalloc.so
 1622776730 /tools/synopsys/vcs/Q-2020.03-SP2-6/linux64/lib/libvfs.so
-1646812464 simv.daidir
+1647030619 simv.daidir
 -1 partitionlib

@@ -12,10 +12,14 @@ module MIPS_TEST();
         end
     end
 
-    wire [31:0] writedata, dataadr, readdata, instr;
-    wire        memwrite;
+    wire [31:0] a_writedata, a_dataadr, a_readdata, a_instr;
+    wire        a_memwrite;
 
-    top DUT(clk, rst, writedata, readdata, dataadr, memwrite, instr);
+    wire [31:0] b_writedata, b_dataadr, b_readdata, b_instr;
+    wire        b_memwrite;
+
+    top DUT(clk, rst, a_writedata, a_readdata, a_dataadr, a_memwrite, a_instr,
+                      b_writedata, b_readdata, b_dataadr, b_memwrite, b_instr);
 
     initial begin
         $dumpfile("top_test_dump.vcd");
@@ -24,14 +28,18 @@ module MIPS_TEST();
         rst = 1;
         #30;
         rst = 0;
-        while(duration < 100)begin
-            $display(duration);
-            $display("MIPS_TEST.DUT.mips.dp.rf.rf[8] = ", MIPS_TEST.DUT.mips.dp.rf.rf[8]);
+        while(duration < 150)begin
+            //$display(duration);
+            //$display("t0 = ", MIPS_TEST.DUT.mips.dp.rf.rf[8]);
             duration = duration + 10;
             #10;
         end
         $display("done");
-        $display("MIPS_TEST.DUT.mips.dp.rf.rf[10] = %h", MIPS_TEST.DUT.mips.dp.rf.rf[10]);
+        $display("t0 = %h", MIPS_TEST.DUT.mips.dp.rf.rf[8]);
+        $display("t1 = %h", MIPS_TEST.DUT.mips.dp.rf.rf[9]);
+        $display("t2 = %h", MIPS_TEST.DUT.mips.dp.rf.rf[10]);
+        $display("t3 = %h", MIPS_TEST.DUT.mips.dp.rf.rf[11]);
+        $display("mem 0x0000 = %h", MIPS_TEST.DUT.dmem.data[0]);
         $finish;
     end
 endmodule

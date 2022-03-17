@@ -1,15 +1,45 @@
 {
+    "controller": [
+        "controller",
+        "KBY0m",
+        "module",
+        1
+    ],
     "flopr_0001": [
         "flopr_0001",
         "C9Nw0",
         "module",
         5
     ],
+    "flopr_0002": [
+        "flopr_0002",
+        "d28BB",
+        "module",
+        6
+    ],
     "cflopr_0000": [
         "cflopr_0000",
         "zH3Rd",
         "module",
         2
+    ],
+    "cflopr_0001": [
+        "cflopr_0001",
+        "ErseA",
+        "module",
+        7
+    ],
+    "ecflopr": [
+        "ecflopr",
+        "K6Gxp",
+        "module",
+        8
+    ],
+    "ALU": [
+        "ALU",
+        "trjvP",
+        "module",
+        9
     ],
     "MIPS_TEST": [
         "MIPS_TEST",

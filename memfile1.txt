@@ -1,0 +1,4 @@
+addi t0, zero, 0x0001
+addi t1, zero, 0x0002
+addi t2, zero, 0x0003
+addi t3, zero, 0x0004
